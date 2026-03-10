@@ -8,4 +8,4 @@
 
 extern int setup_mounts();
 extern int setup_PATH_env();
-extern int setup_drivers();
+

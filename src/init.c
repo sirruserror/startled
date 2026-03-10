@@ -55,14 +55,4 @@ int setup_PATH_env(){
     return 0;
 }
 
-int setup_drivers(){
-    printf("setting up drivers\n");
-    printf("starting video drivers\n");
-    if(system("modprobe i915 &> /dev/null || modprobe amdgpu &> /dev/null || modprobe nouveau &> /dev/null || modprobe vbe &> /dev/null") != 0){
-	fprintf(stderr, "failed to setup video drivers: %s\n", strerror(errno));
-	return 1;
-    }
-    printf("video drivers setup\n");
-    printf("all drivers ready\n");
-    return 0;
-}
+
